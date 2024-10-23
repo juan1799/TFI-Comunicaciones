@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFI - 8QAM</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="../img/klipartz.com.png" type="image/x-icon">
+</head>
+<body class="container-qam">
+    
+    <div class="contenedor-tabla">
+        <a href="../../index.html" class="boton-atras"><i class="bi bi-arrow-left-circle-fill "></i></a>
+        <h1>Constelación 8-QAM</h1>
+        <p>Ingrese una cadena binaria de 12 bits:</p>
+        <div>
+            <input type="text" id="binaryInput" maxlength="12">
+            <button onclick="showPhases()" class="boton">Obtener Fases</button>
+        </div>
+        <p id="cadena"></p>
+        <p id="result"></p>
+        <table border="1">
+            <tr>
+                <th class="table-title">Tribit</th>
+                <th class="table-title">Fase</th>
+                <th class="table-title">Amplitud</th>
+            </tr>
+            <tr class="row" id="01t">
+                <td>000</td>
+                <td>0°</td>
+                <td>1</td>
+            </tr>
+            <tr class="row" id="02t">
+                <td>001</td>
+                <td>0°</td>
+                <td>2</td>
+            </tr>
+            <tr class="row" id="901t">
+                <td>010</td>
+                <td>90°</td>
+                <td>1</td>
+            </tr>
+            <tr class="row" id="902t">
+                <td>011</td>
+                <td>90°</td>
+                <td>2</td>
+            </tr>
+            <tr class="row" id="1801t">
+                <td>100</td>
+                <td>180°</td>
+                <td>1</td>
+            </tr>
+            <tr class="row" id="1802t">
+                <td>101</td>
+                <td>180°</td>
+                <td>2</td>
+            </tr>
+            <tr class="row" id="2701t">
+                <td>110</td>
+                <td>270°</td>
+                <td>1</td>
+            </tr>
+            <tr class="row" id="2702t">
+                <td>111</td>
+                <td>270°</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+        <div class="outer">
+            <div class="point-qam point-left" id="1802" ></div>
+            <div class="point-qam point-right " id="02"></div>
+            <div class="point-qam point-top" id="902"></div>
+            <div class="point-qam point-bottom" id="2702"></div>
+            <span class="span-left">101</span>
+            <span class="span-top">011</span>
+            <span class="span-right">001</span>
+            <span class="span-bottom">111</span>
+
+            <div class="inner">
+                
+                <div class="point-qam point-left" id="1801"></div>
+                <div class="point-qam point-right" id="01"></div>
+                <div class="point-qam point-top" id="901"></div>
+                <div class="point-qam point-bottom" id="2701"></div>
+                <span class="span-left">100</span>
+                <span class="span-top">010</span>
+                <span class="span-right">000</span>
+                <span class="span-bottom">110</span>
+            </div>
+            
+        
+        </div>
+    
+
+</body>
+<script src="../scripts/8qam.js"></script>
+</html>

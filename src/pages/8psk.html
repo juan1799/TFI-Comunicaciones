@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFI - 8PSK</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="../img/klipartz.com.png" type="image/x-icon">
+
+</head>
+
+<body class="container-psk">
+    <div class="graphic">
+        <div class="line line1"><p class="line-value">000</p><span class="point" id="0"></span></div>
+        <div class="line line2"><p class="line-value">001</p><span class="point" id="45"></span></div>
+        <div class="line line3"><p class="line-value">010</p><span class="point" id="90"></span></div>
+        <div class="line line4"><p class="line-value aux">011</p><span class="point" id="135"></span></div>
+        <div class="line line5"><p class="line-value aux">100</p><span class="point" id="180"></span></div>
+        <div class="line line6"><p class="line-value aux">101</p><span class="point" id="225"></span></div>
+        <div class="line line7"><p class="line-value">110</p><span class="point" id="270"></span></div>
+        <div class="line line8"><p class="line-value">111</p><span class="point" id="315"></span></div>
+    </div>
+    <div class="contenedor-tabla">
+        <a href="../../index.html" class="boton-atras"><i class="bi bi-arrow-left-circle-fill "></i></a>
+        
+        <h1>Constelación 8-PSK</h1>
+        <p>Ingrese una cadena binaria de 12 bits:</p>
+        <div>
+            <input type="text" id="binaryInput" maxlength="12">
+            <button onclick="showPhases()" class="boton">Obtener Fases</button>
+        </div>
+        <p id="cadena"></p>
+        <p id="result"></p>
+        <table border="1">
+            <tr>
+                <th class="table-title">Tribit</th>
+                <th class="table-title">Fase</th>
+            </tr>
+            <tr class="row" id="0t">
+                <td>000</td>
+                <td>0°</td>
+            </tr>
+            <tr class="row" id="45t">
+                <td>001</td>
+                <td>45°</td>
+            </tr>
+            <tr class="row" id="90t">
+                <td>010</td>
+                <td>90°</td>
+            </tr>
+            <tr class="row" id="135t">
+                <td>011</td>
+                <td>135°</td>
+            </tr>
+            <tr class="row" id="180t">
+                <td>100</td>
+                <td>180°</td>
+            </tr>
+            <tr class="row" id="225t">
+                <td>101</td>
+                <td>225°</td>
+            </tr>
+            <tr class="row" id="270t">
+                <td>110</td>
+                <td>270°</td>
+            </tr>
+            <tr class="row" id="315t">
+                <td>111</td>
+                <td>315°</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../scripts/8psk.js"></script>        
+</body>
+</html>

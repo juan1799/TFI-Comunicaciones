@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFI - 16PSK</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="../img/klipartz.com.png" type="image/x-icon">
+
+</head>
+
+<body class="container-psk">
+    <div class="graphic">
+        <div class="line line1-2"><p class="line-value">0000</p><span class="point" id="0"></span></div>
+        <div class="line line2-2"><p class="line-value">0001</p><span class="point" id="22.5"></span></div>
+        <div class="line line3-2"><p class="line-value">0010</p><span class="point" id="45"></span></div>
+        <div class="line line4-2"><p class="line-value">0011</p><span class="point" id="67.5"></span></div>
+        <div class="line line5-2"><p class="line-value">0100</p><span class="point" id="90"></span></div>
+        <div class="line line6-2"><p class="line-value aux">0101</p><span class="point" id="112.5"></span></div>
+        <div class="line line7-2"><p class="line-value aux">0110</p><span class="point" id="135"></span></div>
+        <div class="line line8-2"><p class="line-value aux">0111</p><span class="point" id="157.5"></span></div>
+        <div class="line line9-2"><p class="line-value aux">1000</p><span class="point" id="180"></span></div>
+        <div class="line line10-2"><p class="line-value aux">1001</p><span class="point" id="202.5"></span></div>
+        <div class="line line11-2"><p class="line-value aux">1010</p><span class="point" id="225"></span></div>
+        <div class="line line12-2"><p class="line-value aux">1011</p><span class="point" id="247.5"></span></div>
+        <div class="line line13-2"><p class="line-value">1100</p><span class="point" id="270"></span></div>
+        <div class="line line14-2"><p class="line-value">1101</p><span class="point" id="292.5"></span></div>
+        <div class="line line15-2"><p class="line-value">1110</p><span class="point" id="315"></span></div>
+        <div class="line line16-2"><p class="line-value">1111</p><span class="point" id="337.5"></span></div>
+    </div>
+    <div class="contenedor-tabla">
+        <a href="../../index.html" class="boton-atras"><i class="bi bi-arrow-left-circle-fill "></i></a>
+        
+        <h1>Constelación 16-PSK</h1>
+        <p>Ingrese una cadena binaria de 12 bits:</p>
+        <div>
+            <input type="text" id="binaryInput" maxlength="12">
+            <button onclick="showPhases()" class="boton">Obtener Fases</button>
+        </div>
+        <p id="cadena"></p>
+        <p id="result"></p>
+        <table border="1">
+            <tr>
+                <th class="table-title">Tetrabit</th>
+                <th class="table-title">Fase</th>
+            </tr>
+            <tr class="row" id="0t">
+                <td>0000</td>
+                <td>0°</td>
+            </tr>
+            <tr class="row" id="22.5t">
+                <td>0001</td>
+                <td>22.5°</td>
+            </tr>
+            <tr class="row" id="45t">
+                <td>0010</td>
+                <td>45°</td>
+            </tr>
+            <tr class="row" id="67.5t">
+                <td>0011</td>
+                <td>67.5°</td>
+            </tr>
+            <tr class="row" id="90t">
+                <td>0100</td>
+                <td>90°</td>
+            </tr>
+            <tr class="row" id="112.5t">
+                <td>0101</td>
+                <td>112.5°</td>
+            </tr>
+            <tr class="row" id="135t">
+                <td>0110</td>
+                <td>135°</td>
+            </tr>
+            <tr class="row" id="157.5t">
+                <td>0111</td>
+                <td>157.5°</td>
+            </tr>
+            <tr class="row" id="180t">
+                <td>1000</td>
+                <td>180°</td>
+            </tr>
+            <tr class="row" id="202.5t">
+                <td>1001</td>
+                <td>202.5°</td>
+            </tr>
+            <tr class="row" id="225t">
+                <td>1010</td>
+                <td>225°</td>
+            </tr>
+            <tr class="row" id="247.5t">
+                <td>1011</td>
+                <td>247.5°</td>
+            </tr>
+            <tr class="row" id="270t">
+                <td>1100</td>
+                <td>270°</td>
+            </tr>
+            <tr class="row" id="292.5t">
+                <td>1101</td>
+                <td>292.5°</td>
+            </tr>
+            <tr class="row" id="315t">
+                <td>1110</td>
+                <td>315°</td>
+            </tr>
+            <tr class="row" id="337.5t">
+                <td>1111</td>
+                <td>337.5°</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../scripts/16psk.js"></script>        
+</body>
+</html>
