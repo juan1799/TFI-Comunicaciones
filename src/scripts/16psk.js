@@ -46,9 +46,12 @@ function getPSKPhase(binaryInput) {
     const phases = getPSKPhase(binaryInput);
   
     phases.forEach(
-      (phase) => {
-         document.getElementById(''+phase+'').classList.add('active');
-         document.getElementById(''+phase+'t').classList.add('active-row');
+      (phase, index) => {
+        setTimeout(()=>{
+          document.getElementById(''+phase+'').classList.add('active');
+          document.getElementById(''+phase+'t').classList.add('active-row');
+        }, 1250*index)
+         
       }
     );
     document.getElementById('cadena').innerText = `Cadena: ${document.getElementById('binaryInput').value.match(/.{1,4}/g).join("-")}`

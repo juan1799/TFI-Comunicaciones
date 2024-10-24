@@ -36,10 +36,11 @@ function getQAM(binaryInput) {
     }
     const phases = getQAM(binaryInput);
     phases.forEach(
-      (phase) => {
-        document.getElementById(''+phase[0]+''+phase[1]+'').classList.add('active');
-
-        document.getElementById(''+phase[0]+''+phase[1]+'t').classList.add('active-row');
+      (phase, index) => {
+        setTimeout(()=>{
+          document.getElementById(''+phase[0]+''+phase[1]+'').classList.add('active');
+          document.getElementById(''+phase[0]+''+phase[1]+'t').classList.add('active-row');
+        },1250*index)
       }
     );
     document.getElementById('cadena').innerText = `Cadena: ${document.getElementById('binaryInput').value.match(/.{1,3}/g).join("-")}`
