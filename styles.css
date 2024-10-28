@@ -92,7 +92,12 @@ body{
 
 
 }
-
+/* .graphic{
+    position:relative;
+    width: 400px;
+    min-width: 350px;
+    margin: 15px;
+} */
 .line {
     width: 200px;
     height: 1px;
@@ -161,7 +166,7 @@ input{
 .contenedor-tabla{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 
@@ -182,6 +187,7 @@ input{
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding: 30px;
+    align-items: center;
 }
 .outer {
     width: 300px;
@@ -282,86 +288,7 @@ input{
 
 
 
-/*        16QAM          */
-.middle {
-    width: 215px;
-    height: 215px;
-    background-color: #3e142344 ;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed rgb(183, 182, 182);
-}
-
-.inner-16 {
-    width: 125px;
-    height: 125px;
-    background-color: #ff2d7644 ;
-    position: relative;
-    border: 2px dashed rgb(183, 182, 182);
-}
-
-.point-top-left{
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-
-}
-.point-top-right{
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-}
-
-.point-bottom-left{
-    bottom: 0;
-    left: 0;
-    transform: translate(-50%, 50%);
-}
-
-.point-bottom-right{
-    bottom: 0;
-    right: 0;
-    transform: translate(50%, 50%);
-}
-
-.span-top-left{
-    position: absolute;
-    font-size: 12px;
-    z-index: 12;
-    top: 0;
-    left: 0;
-    transform: translate(-50%,40%);
-}
-
-.span-top-right{
-    position: absolute;
-    font-size: 12px;
-    z-index: 12;
-    top: 0;
-    right: 0;
-    transform: translate(50%,40%);
-}
-
-.span-bottom-left{
-    position: absolute;
-    font-size: 12px;
-    z-index: 12;
-    bottom: 0;
-    left: 0;
-    transform: translate(-50%,-50%);
-}
-
-.span-bottom-right{
-    position: absolute;
-    font-size: 12px;
-    z-index: 12;
-    bottom: 0;
-    right: 0;
-    transform: translate(50%,-50%);
-}
-
+/*   16-qam     */
 .span-top{
     position: absolute;
     font-size: 12px;
@@ -369,7 +296,7 @@ input{
     top: 0;
     left: 50%;
     transform: translate(-50%,40%);
-}
+} 
 
 .span-left{
     position: absolute;
@@ -386,7 +313,7 @@ input{
     z-index: 12;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,150%);
 }
 .span-right{
     position: absolute;
@@ -407,3 +334,197 @@ input{
     transition: background-color 0.75s, box-shadow 0.75s;
 }
 
+.circle-1{
+    width: 400px;
+    border: 2px dashed gray;
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #4fc2dc34;
+    
+
+}
+
+
+.circle-2{
+    width: 200px;
+    height: 200px;
+    border: 2px dashed gray;
+    border-radius: 50%;
+    position: relative;
+    background-color: #ff2d764a;
+}
+
+.circle-1 .point-left {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.circle-1 .point-right {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.circle-1 .point-top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle-1 .point-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+/*top right*/
+.circle-1 .point-top-right {
+    top: calc(50% - 141px);
+    left: calc(50% + 141px);
+    transform: translate(-50%, -50%);
+}
+
+.circle-1 .point-bottom-right {
+    top: calc(50% + 141px);
+    left: calc(50% + 141px);
+    transform: translate(-50%, -50%);
+}
+
+.circle-1 .point-bottom-left {
+    top: calc(50% + 141px);
+    left: calc(50% - 141px);
+    transform: translate(-50%, -50%);
+}
+
+.circle-1 .point-top-left {
+    top: calc(48% - 141px);
+    left: calc(50% - 141px);
+    transform: translate(-50%);
+}
+
+.span-top-left{
+    position: absolute;
+    top: calc(52% - 141px);
+    left: calc(50% - 141px);
+    transform: translate(-50%);  
+    font-size: 12px;
+}
+
+.span-bottom-left{
+    position: absolute;
+    top: calc(54% + 141px);
+    left: calc(50% - 141px);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+.span-top-right{
+    position: absolute;
+    top: calc(54% - 141px);
+    left: calc(50% + 141px);
+    transform: translate(-50%, -50%); 
+    font-size: 12px;
+}
+.span-bottom-right{
+    position: absolute;
+    top: calc(54% + 141px);
+    left: calc(50% + 141px);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+.circle-2 .point-left{
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.circle-2 .point-right {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.circle-2 .point-top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle-2 .point-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.circle-2 .point-top-right {
+    top: calc(50% - 70px);
+    left: calc(50% + 70px);
+    transform: translate(-50%, -50%);
+}
+
+.circle-2 .point-bottom-right {
+    top: calc(50% + 70px);
+    left: calc(50% + 70px);
+    transform: translate(-50%, -50%);
+}
+
+.circle-2 .point-bottom-left {
+    top: calc(50% + 70px);
+    left: calc(50% - 70px);
+    transform: translate(-50%, -50%);
+}
+
+.circle-2 .point-top-left {
+    top: calc(47% - 70px);
+    left: calc(50% - 70px);
+    transform: translate(-50%);
+}
+
+.circle-2 .span-top-left{
+    position: absolute;
+    top: calc(54% - 70px);
+    left: calc(50% - 70px);
+    transform: translate(-50%);  
+    font-size: 12px;
+}
+
+.circle-2 .span-bottom-left{
+    position: absolute;
+    top: calc(59% + 70px);
+    left: calc(50% - 70px);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+.circle-2 .span-top-right{
+    position: absolute;
+    top: calc(59% - 70px);
+    left: calc(50% + 70px);
+    transform: translate(-50%, -50%); 
+    font-size: 12px;
+}
+.circle-2 .span-bottom-right{
+    position: absolute;
+    top: calc(59% + 70px);
+    left: calc(50% + 70px);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+.linea-16qam{
+    position: absolute;
+    width: 400px;
+    height: 1.5px;
+    border: 1.5px dashed gray;
+    
+}
+
+.linea1{
+    transform: rotate(-45deg);
+}
+
+.linea2{
+    transform: rotate(45deg);
+}
+
+.linea3{
+    transform: rotate(90deg);
+}

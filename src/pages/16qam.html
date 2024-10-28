@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFI - 8QAM</title>
+    <title>TFI - 16QAM</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="../img/klipartz.com.png" type="image/x-icon">
@@ -13,6 +13,7 @@
     <div class="contenedor-tabla qam">
         <a href="../../index.html" class="boton-atras"><i class="bi bi-arrow-left-circle-fill "></i></a>
         <h1>Constelación 16-QAM</h1>
+        <h3>2 Amplitudes - 8 fases</h3>
         <p>Ingrese una cadena binaria de 12 bits:</p>
         <div>
             <input type="text" id="binaryInput" maxlength="12">
@@ -26,132 +27,129 @@
                 <th class="table-title">Fase</th>
                 <th class="table-title">Amplitud</th>
             </tr>
-            <tr class="row" id="451t">
+            <tr class="row" id="01t">
                 <td>0000</td>
+                <td>0°</td>
+                <td>1</td>
+            </tr>
+            <tr class="row" id="451t">
+                <td>0001</td>
                 <td>45°</td>
                 <td>1</td>
             </tr>
+            <tr class="row" id="901t">
+                <td>0010</td>
+                <td>90°</td>
+                <td>1</td>
+            </tr>
             <tr class="row" id="1351t">
-                <td>0001</td>
+                <td>0011</td>
                 <td>135°</td>
                 <td>1</td>
             </tr>
+            <tr class="row" id="1801t">
+                <td>0100</td>
+                <td>180°</td>
+                <td>1</td>
+            </tr>
             <tr class="row" id="2251t">
-                <td>0010</td>
+                <td>0101</td>
                 <td>225°</td>
                 <td>1</td>
             </tr>
+            <tr class="row" id="2701t">
+                <td>0110</td>
+                <td>270°</td>
+                <td>1</td>
+            </tr>
             <tr class="row" id="3151t">
-                <td>0011</td>
+                <td>0111</td>
                 <td>315°</td>
                 <td>1</td>
             </tr>
             <tr class="row" id="02t">
-                <td>0100</td>
+                <td>1000</td>
                 <td>0°</td>
                 <td>2</td>
             </tr>
             <tr class="row" id="452t">
-                <td>0101</td>
+                <td>1001</td>
                 <td>45°</td>
                 <td>2</td>
             </tr>
             <tr class="row" id="902t">
-                <td>0110</td>
+                <td>1010</td>
                 <td>90°</td>
                 <td>2</td>
             </tr>
             <tr class="row" id="1352t">
-                <td>0111</td>
+                <td>1011</td>
                 <td>135°</td>
                 <td>2</td>
             </tr>
             <tr class="row" id="1802t">
-                <td>1000</td>
+                <td>1100</td>
                 <td>180°</td>
                 <td>2</td>
             </tr>
             <tr class="row" id="2252t">
-                <td>1001</td>
+                <td>1101</td>
                 <td>225°</td>
                 <td>2</td>
             </tr>
             <tr class="row" id="2702t">
-                <td>1010</td>
+                <td>1110</td>
                 <td>270°</td>
                 <td>2</td>
             </tr>
             <tr class="row" id="3152t">
-                <td>1011</td>
+                <td>1111</td>
                 <td>315°</td>
                 <td>2</td>
             </tr>
-            <tr class="row" id="03t">
-                <td>1100</td>
-                <td>0°</td>
-                <td>3</td>
-            </tr>
-            <tr class="row" id="903t">
-                <td>1101</td>
-                <td>90°</td>
-                <td>3</td>
-            </tr>
-            <tr class="row" id="1803t">
-                <td>1110</td>
-                <td>180°</td>
-                <td>3</td>
-            </tr>
-            <tr class="row" id="2703t">
-                <td>1111</td>
-                <td>270°</td>
-                <td>3</td>
-            </tr>
         </table>
     </div>
-        <div class="outer">
-            <div class="point-qam point-left" id="1803" ></div>
-            <div class="point-qam point-right " id="03"></div>
-            <div class="point-qam point-top" id="903"></div>
-            <div class="point-qam point-bottom" id="2703"></div>
-            <span class="span-left">1110</span>
-            <span class="span-top">1101</span>
-            <span class="span-right">1100</span>
-            <span class="span-bottom">1111</span>
-
-            <div class="middle">
-                    <div class="point-qam point-top-left" id="1352"></div>
-                    <div class="point-qam point-top-right" id="452"></div>
-                    <div class="point-qam point-bottom-left" id="2252"></div>
-                    <div class="point-qam point-bottom-right" id="3152"></div>
-                    <div class="point-qam point-top" id="902"></div>
-                    <div class="point-qam point-left" id="1802"></div>
-                    <div class="point-qam point-right" id="02"></div>
-                    <div class="point-qam point-bottom" id="2702"></div>
-                    <span class="span-top-left">0111</span>
-                    <span class="span-top-right">0101</span>
-                    <span class="span-bottom-left">1001</span>
-                    <span class="span-bottom-right">1011</span>
-                    <span class="span-left">1000</span>
-                    <span class="span-top">0110</span>
-                    <span class="span-right">0100</span>
-                    <span class="span-bottom">1010</span>
-                
-                <div class="inner-16">
-                    <div class="point-qam point-top-left" id="1351"></div>
-                    <div class="point-qam point-top-right" id="451"></div>
-                    <div class="point-qam point-bottom-left" id="2251"></div>
-                    <div class="point-qam point-bottom-right" id="3151"></div>
-                    <span class="span-top-left">0001</span>
-                    <span class="span-top-right">0000</span>
-                    <span class="span-bottom-left">0010</span>
-                    <span class="span-bottom-right">0011</span>
-                </div>
-            </div>
-            
-        
-        </div>
     
-
+        <div class="circle-1">
+            <div class="point-qam point-left" id="1802" ></div>
+            <div class="point-qam point-right " id="02"></div>
+            <div class="point-qam point-top" id="902"></div>
+            <div class="point-qam point-bottom" id="2702"></div>
+            <div class="point-qam point-top-left" id="1352"></div>
+            <div class="point-qam point-top-right" id="452"></div>
+            <div class="point-qam point-bottom-left" id="2252"></div>
+            <div class="point-qam point-bottom-right" id="3152"></div>
+            <span class="span-left">1100</span>
+            <span class="span-top">1010</span>
+            <span class="span-right">1000</span>
+            <span class="span-bottom">1110</span>
+            <span class="span-top-left">1011</span>
+            <span class="span-top-right">1001</span>
+            <span class="span-bottom-left">1101</span>
+            <span class="span-bottom-right">1111</span>
+            <div class="linea-16qam linea1"></div>
+            <div class="linea-16qam linea2"></div>
+            <div class="linea-16qam linea3"></div>
+            <div class="linea-16qam linea4"></div>
+            <div class="circle-2">
+                <div class="point-qam point-left" id="1801" ></div>
+                <div class="point-qam point-right " id="01"></div>
+                <div class="point-qam point-top" id="901"></div>
+                <div class="point-qam point-bottom" id="2701"></div>
+                <div class="point-qam point-top-left" id="1351"></div>
+                <div class="point-qam point-top-right" id="451"></div>
+                <div class="point-qam point-bottom-left" id="2251"></div>
+                <div class="point-qam point-bottom-right" id="3151"></div>
+                <span class="span-left">0100</span>
+                <span class="span-top">0010</span>
+                <span class="span-right">0000</span>
+                <span class="span-bottom">0110</span>
+                <span class="span-top-left">0011</span>
+                <span class="span-top-right">0001</span>
+                <span class="span-bottom-left">0101</span>
+                <span class="span-bottom-right">0111</span>
+            </div>
+        </div>
 </body>
 <script src="../scripts/16qam.js"></script>
 </html>
