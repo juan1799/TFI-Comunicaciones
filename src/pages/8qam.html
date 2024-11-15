@@ -18,9 +18,13 @@
             <input type="text" id="binaryInput" maxlength="12">
             <button onclick="showPhases()" class="boton">Obtener Fases</button>
         </div>
+        <div class="botones ocultar" id="botones">
+            <button onclick="irAtras()" class="boton boton2 button-disabled" id="atras"><i class="bi bi-chevron-double-left"></i></button>
+            <button onclick="irAdelante()" class="boton boton2 adelante" id="adelante"><i class="bi bi-chevron-double-right"></i></button>
+        </div>
         <p id="cadena"></p>
         <p id="result"></p>
-        <table border="1">
+        <table border="1" id="miTabla">
             <tr>
                 <th class="table-title">Tribit</th>
                 <th class="table-title">Fase</th>
@@ -68,20 +72,22 @@
             </tr>
         </table>
     </div>
-        <div class="outer">
+    <div class="circle-1">
             <div class="point-qam point-left" id="1802" ></div>
-            <div class="point-qam point-right " id="02"></div>
             <div class="point-qam point-top" id="902"></div>
+            <div class="point-qam point-right " id="02"></div>
             <div class="point-qam point-bottom" id="2702"></div>
             <span class="span-left">101</span>
             <span class="span-top">011</span>
             <span class="span-right">001</span>
             <span class="span-bottom">111</span>
-
-            <div class="inner">
-                
-                <div class="point-qam point-left" id="1801"></div>
-                <div class="point-qam point-right" id="01"></div>
+            <div class="linea-16qam linea1"></div>
+            <div class="linea-16qam linea2"></div>
+            <div class="linea-16qam linea3"></div>
+            <div class="linea-16qam linea4"></div>
+            <div class="circle-2">
+                <div class="point-qam point-left" id="1801" ></div>
+                <div class="point-qam point-right " id="01"></div>
                 <div class="point-qam point-top" id="901"></div>
                 <div class="point-qam point-bottom" id="2701"></div>
                 <span class="span-left">100</span>
@@ -89,9 +95,9 @@
                 <span class="span-right">000</span>
                 <span class="span-bottom">110</span>
             </div>
-            
-        
         </div>
+        
+    </div>
     
 
 </body>

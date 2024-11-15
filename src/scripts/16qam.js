@@ -32,7 +32,7 @@ function getQAM(binaryInput) {
   
   function showPhases() {
     const binaryInput = document.getElementById('binaryInput').value;
-    const puntos = document.querySelectorAll('.active');
+    const puntos = document.querySelectorAll('.point-qam');
     const rows = document.querySelectorAll('.row');
 
     puntos.forEach((elemento) => {
@@ -50,7 +50,12 @@ function getQAM(binaryInput) {
       (phase,index) => {
         setTimeout(()=>{
           console.log(phase);
-        
+          puntos.forEach((elemento) => {
+            elemento.classList.remove('active');
+          })
+          rows.forEach((row) => {
+            row.classList.remove('active-row')
+          })
           document.getElementById(''+phase[0]+''+phase[1]+'').classList.add('active');
   
           document.getElementById(''+phase[0]+''+phase[1]+'t').classList.add('active-row');
@@ -63,3 +68,31 @@ function getQAM(binaryInput) {
     Fases:
      ${phases.map(phase => phase.join('°, Amplitud: ')).join('  |  ')} `;
   }
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const tabla = document.getElementById('miTabla');
+    
+    tabla.addEventListener('click', (event) => {
+      const fila = event.target.closest('tr');
+      
+      if (fila) {
+        console.log('Fila clickeada:', fila.rowIndex);
+  
+        const phase = fila.cells[1].textContent.slice(0, -1);
+        const amplitude = fila.cells[2].textContent;
+        
+        console.log('Phase:', phase);
+        console.log('Amplitude:', amplitude);
+  
+        if(document.getElementById(''+phase+''+amplitude+'t').classList.contains('active-row')){
+  
+          document.getElementById(''+phase+''+amplitude+'t').classList.remove('active-row') 
+          document.getElementById(''+phase+''+amplitude).classList.remove('active');
+        }else{
+  
+          document.getElementById(''+phase+''+amplitude+'t').classList.add('active-row');
+          document.getElementById(''+phase+''+amplitude).classList.add('active');
+        }
+      }
+    });
+  });
