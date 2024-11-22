@@ -13,11 +13,14 @@
     <div class="contenedor-tabla">
         <a href="../../index.html" class="boton-atras"><i class="bi bi-arrow-left-circle-fill "></i></a>
         <h1>Constelación 8-QAM</h1>
+        <h3>2 Amplitudes - 4 fases</h3>
         <p>Ingrese una cadena binaria de 12 bits:</p>
         <div>
-            <input type="text" id="binaryInput" maxlength="12">
+            <input type="text" id="binaryInput" maxlength="12" placeholder="Ingrese una cadena binaria">
+            <button onclick="generateRandomBinary()" class="boton">Generar cadena</button>
             <button onclick="showPhases()" class="boton">Obtener Fases</button>
         </div>
+        
         <div class="botones ocultar" id="botones">
             <button onclick="irAtras()" class="boton boton2 button-disabled" id="atras"><i class="bi bi-chevron-double-left"></i></button>
             <button onclick="irAdelante()" class="boton boton2 adelante" id="adelante"><i class="bi bi-chevron-double-right"></i></button>

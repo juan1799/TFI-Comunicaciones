@@ -136,3 +136,11 @@ function irAdelante() {
     botonAdelante.classList.add('button-disabled');
   }
 }
+
+function generateRandomBinary() {
+  let binaryString = '';
+  for (let i = 0; i < 12; i++) {
+      binaryString += Math.floor(Math.random() * 2); // Genera 0 o 1 de forma aleatoria
+  }
+  document.getElementById('binaryInput').value = binaryString;
+}

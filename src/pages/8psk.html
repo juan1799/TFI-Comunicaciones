@@ -27,9 +27,11 @@
         <h1>Constelación 8-PSK</h1>
         <p>Ingrese una cadena binaria de 12 bits:</p>
         <div>
-            <input type="text" id="binaryInput" maxlength="12">
+            <input type="text" id="binaryInput" maxlength="12" placeholder="ingrese una cadena binaria">
+            <button onclick="generateRandomBinary()" class="boton">Generar cadena</button>
             <button onclick="showPhases()" class="boton">Obtener Fases</button>
         </div>
+        
         <p id="cadena"></p>
         <p id="result"></p>
         <table border="1" id="miTabla">
